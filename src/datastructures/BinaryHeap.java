@@ -110,4 +110,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
         array[hole] = tmp;
     }
 
+    public static void main(String[] args) {
+        BinaryHeap<Integer> binaryHeap = new BinaryHeap<>();
+    }
 }

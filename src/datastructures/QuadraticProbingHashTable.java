@@ -1,6 +1,5 @@
 package datastructures;
 
-import org.jetbrains.annotations.Contract;
 
 import java.math.BigInteger;
 
@@ -55,19 +54,7 @@ public class QuadraticProbingHashTable<T> {
             this(element, true);
         }
     }
-
-    private static boolean isPrime(int n) {
-        if (n < 3) {
-            return n == 2;
-        }
-        for (int i = 2; i < Math.sqrt(n); i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
+    
     private int myHash(T x) {
         int hashValue = x.hashCode();
         return hashValue;
@@ -109,7 +96,6 @@ public class QuadraticProbingHashTable<T> {
         return currentPos;
     }
 
-    @Contract(pure = true)
     private boolean isActive(int currentPos) {
         return array[currentPos] != null && array[currentPos].isActive;
     }

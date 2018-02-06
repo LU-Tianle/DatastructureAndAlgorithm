@@ -22,18 +22,6 @@ public class SeparateChainingHashTable<T> {
     private int currentSize;
     private List<T>[] theLists;
 
-    private static boolean isPrime(int n) {
-        if (n < 3) {
-            return n == 2;
-        }
-        for (int i = 2; i < Math.sqrt(n); i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public SeparateChainingHashTable(Integer size) {
         BigInteger bigSize = new BigInteger(size.toString());
         theLists = new LinkedList[bigSize.nextProbablePrime().intValue()];

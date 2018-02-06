@@ -1,4 +1,4 @@
-package divideAndConquer;
+package divideandconquer;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import java.util.Random;
  * Created with IntelliJ IDEA.
  * Author: Lu Tianle
  * Date: 2017-12-26 10:57
- * Description: 求解一个最大子数组的算法,给出暴力算法和分治算法,然后比较
+ * Description: 求解一个最大子数组的算法，给出暴力算法和分治算法，然后比较
  * 比较结果：
  * 实验表面采用递归实现的分治算法并不比暴力算法快多少，无论输入规模是多大
  * 可能是由于递归实现开销大
