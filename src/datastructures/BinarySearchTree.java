@@ -14,10 +14,10 @@ package datastructures;
 
 public class BinarySearchTree<T extends Comparable<? super T>> {
 
-    private static class Node<T> {
-        T element;
-        Node<T> left;
-        Node<T> right;
+    public static class Node<T> {
+        public T element;
+        public Node<T> left;
+        public  Node<T> right;
 
         public Node(T element) {
             this.element = element;
@@ -30,7 +30,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         }
     }
 
-    private Node<T> root;
+    public Node<T> root;
 
     public BinarySearchTree() {
         root = null;
@@ -99,24 +99,21 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     }
 
     public void insert(T x) {
-        insert(x, root);
+        root = insert(x, root);
     }
 
     private Node<T> insert(T x, Node<T> root) {
         if (root == null) {
             return new Node<>(x, null, null);
+        } else {
+            int compareResult = x.compareTo(root.element);
+            if (compareResult < 0) {
+                root.left = insert(x, root.left);
+            } else if (compareResult > 0) {
+                root.right = insert(x, root.right);
+            }
+            return root;
         }
-
-        int compareResult = x.compareTo(root.element);
-
-        if (compareResult < 0) {
-            root.left = insert(x, root.left);
-
-        } else if (compareResult > 0) {
-            root.right = insert(x, root.right);
-        }
-
-        return root;
     }
 
     private Node<T> remove(T x, Node<T> root) {
@@ -143,20 +140,33 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return remove(x, root);
     }
 
-    public void printTree() {
+    /**
+     * 按从小到大的顺序打印关键字
+     */
+    public void printKeywords() {
         if (isEmpty()) {
             System.out.println("Empty Tree");
         } else {
-            printTree(root);
+            printKeywords(root);
         }
+    }
+
+    private void printKeywords(Node<T> root) {
+        if (root != null) {//中序遍历
+            printKeywords(root.left);
+            System.out.print(root.element + " ");
+            printKeywords(root.right);
+        }
+    }
+
+    /**
+     * 按树的形状打印树
+     */
+    public void printTree() {
 
     }
 
     private void printTree(Node<T> root) {
-        if (root != null) {
-            printTree(root.left);
-            System.out.println(root.element);
-            printTree(root.right);
-        }
+
     }
 }
