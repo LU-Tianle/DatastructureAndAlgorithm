@@ -6,10 +6,10 @@ import java.util.Random;
 
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-12-30 15:01
- * Description:
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-12-30 15:01<p>
+ * 几种线性时间的排序算法<p>
  */
 public class LinearTimeSort {
     /**

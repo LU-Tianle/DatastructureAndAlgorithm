@@ -3,10 +3,10 @@ package sort;
 import datastructures.BinaryHeap;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-12-29 14:40
- * Description: 二叉堆排序
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-12-29 14:40<p>
+ * 二叉堆排序<p>
  */
 public class HeapSort {
     public static <T extends Comparable<? super T>> void heapSort(T[] array) {

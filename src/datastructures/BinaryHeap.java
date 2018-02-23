@@ -1,21 +1,19 @@
 package datastructures;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Lu Tainle
- * Date: 2017-09-10
- * Description: 优先队列的二叉堆实现
+ * Created with IntelliJ IDEA.<p>
+ * User: Lu Tainle<p>
+ * Date: 2017-09-10<p>
+ * 优先队列的二叉堆实现<p>
+ * // ******************PUBLIC OPERATIONS*********************<p>
+ * // void insert( x )       --> Insert x<p>
+ * // Comparable deleteMin( )--> Return and remove smallest item<p>
+ * // Comparable findMin( )  --> Return smallest item<p>
+ * // boolean isEmpty( )     --> Return true if empty; else false<p>
+ * // void makeEmpty( )      --> Remove all items<p>
+ * // ******************ERRORS********************************<p>
+ * // Throws UnderflowException as appropriate<p>
  */
-
-// ******************PUBLIC OPERATIONS*********************
-// void insert( x )       --> Insert x
-// Comparable deleteMin( )--> Return and remove smallest item
-// Comparable findMin( )  --> Return smallest item
-// boolean isEmpty( )     --> Return true if empty; else false
-// void makeEmpty( )      --> Remove all items
-// ******************ERRORS********************************
-// Throws UnderflowException as appropriate
-
 public class BinaryHeap<T extends Comparable<? super T>> {
     private static final int DEFAULT_CAPACITY = 10;
     private int currentSize;
@@ -60,7 +58,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
 
     public T findMin() {
         if (isEmpty()) {
-//            throw new UnderflowException( );
+            System.err.println("Empty Heap");
             return null;
         }
         return array[1];
@@ -83,7 +81,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
 
     public T deleteMin() {
         if (isEmpty()) {
-//            throw new UnderFlowException;
+            System.err.println("Empty Heap");
             return null;
         }
         T min = findMin();

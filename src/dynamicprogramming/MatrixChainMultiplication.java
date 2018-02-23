@@ -1,11 +1,11 @@
 package dynamicprogramming;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-02-02 19:29
- * Description: 矩阵链乘法问题（算法导论15.2，15，3）
- * 采用动态规划的思想，给出带备忘的自顶向下和自底向上两种算法
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-02-02 19:29<p>
+ * 矩阵链乘法问题（算法导论15.2，15，3）<p>
+ * 采用动态规划的思想，给出带备忘的自顶向下和自底向上两种算法<p>
  */
 public class MatrixChainMultiplication {
 
@@ -15,6 +15,11 @@ public class MatrixChainMultiplication {
      * @param matrixChainSize 矩阵链的大小数组，长度是矩阵个数+1
      */
     public static void matrixChainOrder(Integer[] matrixChainSize) {
+        for (Integer integer : matrixChainSize) {
+            if (integer <= 0) {
+                throw new IllegalArgumentException("输入参数错误");
+            }
+        }
         int n = matrixChainSize.length - 1;//矩阵数量
         Integer[][] minMultiplyTimes = new Integer[n][n];//m[i][j]：矩阵链i-j相乘所需的最少乘法次数
         Integer[][] segmentationPoint = new Integer[n][n];//s[i][j]：矩阵链i-j相乘所需的最少乘法的分割点
@@ -64,6 +69,11 @@ public class MatrixChainMultiplication {
      * @param matrixChainSize 矩阵链的大小数组，长度是矩阵个数+1
      */
     public static void memoizedMatrixChain(Integer[] matrixChainSize) {
+        for (Integer integer : matrixChainSize) {
+            if (integer <= 0) {
+                throw new IllegalArgumentException("输入参数错误");
+            }
+        }
         int n = matrixChainSize.length - 1;//矩阵数量
         Integer[][] minMultiplyTimes = new Integer[n][n];//m[i][j]：矩阵链i-j相乘所需的最少乘法次数
         Integer[][] segmentationPoint = new Integer[n][n];//s[i][j]：矩阵链i-j相乘所需的最少乘法的分割点

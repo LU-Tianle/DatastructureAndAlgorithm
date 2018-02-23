@@ -1,22 +1,20 @@
 package datastructures;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Lu Tainle
- * Date: 2017-09-10
- * Description: 左式堆
+ * Created with IntelliJ IDEA.<p>
+ * User: Lu Tainle<p>
+ * Date: 2017-09-10<p>
+ * 左式堆<p>
+ * // ******************PUBLIC OPERATIONS*********************<p>
+ * // void insert( x )       --> Insert x<p>
+ * // Comparable deleteMin( )--> Return and remove smallest item<p>
+ * // Comparable findMin( )  --> Return smallest item<p>
+ * // boolean isEmpty( )     --> Return true if empty; else false<p>
+ * // void makeEmpty( )      --> Remove all items<p>
+ * // void merge( rhs )      --> Absorb rhs into this heap<p>
+ * // ******************ERRORS********************************<p>
+ * // Throws UnderflowException as appropriate<p>
  */
-
-// ******************PUBLIC OPERATIONS*********************
-// void insert( x )       --> Insert x
-// Comparable deleteMin( )--> Return and remove smallest item
-// Comparable findMin( )  --> Return smallest item
-// boolean isEmpty( )     --> Return true if empty; else false
-// void makeEmpty( )      --> Remove all items
-// void merge( rhs )      --> Absorb rhs into this heap
-// ******************ERRORS********************************
-// Throws UnderflowException as appropriate
-
 public class LeftistHeap<T extends Comparable<? super T>> {
     public static class Node<T> {
         int npl;//零路径长
@@ -52,7 +50,7 @@ public class LeftistHeap<T extends Comparable<? super T>> {
 
     public T findMin() {
         if (isEmpty()) {
-//            throw new UnderflowException( );
+            System.err.println("Empty Heap");
             return null;
         }
         return root.element;
@@ -108,7 +106,7 @@ public class LeftistHeap<T extends Comparable<? super T>> {
 
     public T deleteMin() {
         if (isEmpty()) {
-//            throw new UnderflowException();
+            System.err.println("Empty Heap");
             return null;
         }
         T minItem = root.element;

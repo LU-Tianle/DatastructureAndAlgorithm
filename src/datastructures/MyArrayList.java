@@ -2,15 +2,14 @@ package datastructures;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.Array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-9-13
- * Description: 表的数组实现，即：实现Collection中的ArrayList
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-9-13<p>
+ * 表的数组实现，即：实现Collection中的ArrayList<p>
  */
 public class MyArrayList<T> implements Iterable<T> {
     private static final int DEFAULT_CAPACITY = 10;

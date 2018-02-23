@@ -1,10 +1,10 @@
 package sort;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-9-13
- * Description: 快速排序
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-9-13<p>
+ * 快速排序<p>
  */
 
 public class QuickSort {

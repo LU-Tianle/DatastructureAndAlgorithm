@@ -1,17 +1,16 @@
 package datastructures;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Lu Tainle
- * Date: 2017-09-21
- * Description: 不相交集类，所有元素已按0~N-1编号
+ * Created with IntelliJ IDEA.<p>
+ * User: Lu Tainle<p>
+ * Date: 2017-09-21<p>
+ * 不相交集类，所有元素已按0~N-1编号<p>
+ * // ******************PUBLIC OPERATIONS*********************<p>
+ * // void union( root1, root2 ) --> Merge two sets<p>
+ * // int find( x )              --> Return set containing x<p>
+ * // ******************ERRORS********************************<p>
+ * // No error checking is performed<p>
  */
-
-// ******************PUBLIC OPERATIONS*********************
-// void union( root1, root2 ) --> Merge two sets
-// int find( x )              --> Return set containing x
-// ******************ERRORS********************************
-// No error checking is performed
 
 public class DisjointSet {
     private int[] s;

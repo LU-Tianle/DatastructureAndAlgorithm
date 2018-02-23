@@ -1,10 +1,10 @@
 package sort;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-9-13
- * Description: 归并排序
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-9-13<p>
+ * 二分归并排序<p>
  */
 public class MergeSort {
 

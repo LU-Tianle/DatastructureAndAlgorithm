@@ -4,7 +4,7 @@ package dynamicprogramming;
  * Created with IntelliJ IDEA.
  * Author: Lu Tianle
  * Date: 2018-02-05 16:38
- * Description: 最长公共子序列问题（LCS）（算法导论15.4）
+ * 最长公共子序列问题（LCS）（算法导论15.4）
  */
 public class LongestCommonSubsequent {
 

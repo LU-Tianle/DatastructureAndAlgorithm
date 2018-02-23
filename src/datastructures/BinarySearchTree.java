@@ -1,23 +1,28 @@
 package datastructures;
 
-// ******************PUBLIC OPERATIONS*********************
-// void insert( x )       --> Insert x
-// void remove( x )       --> Remove x
-// boolean contains( x )  --> Return true if x is present
-// Comparable findMin( )  --> Return smallest item
-// Comparable findMax( )  --> Return largest item
-// boolean isEmpty( )     --> Return true if empty; else false
-// void makeEmpty( )      --> Remove all items
-// void printTree( )      --> Print tree in sorted order
-// ******************ERRORS********************************
-// Throws UnderflowException as appropriate
-
+/**
+ * Created with IntelliJ IDEA.<p>
+ * User: Lu Tainle<p>
+ * Date: 2017-09-05<p>
+ * 二叉搜索树<p>
+ * // ******************PUBLIC OPERATIONS*********************<p>
+ * // void insert( x )       --> Insert x<p>
+ * // void remove( x )       --> Remove x<p>
+ * // boolean contains( x )  --> Return true if x is present<p>
+ * // Comparable findMin( )  --> Return smallest item<p>
+ * // Comparable findMax( )  --> Return largest item<p>
+ * // boolean isEmpty( )     --> Return true if empty; else false<p>
+ * // void makeEmpty( )      --> Remove all items<p>
+ * // void printTree( )      --> Print tree in sorted order<p>
+ * // ******************ERRORS********************************<p>
+ * // Throws UnderflowException as appropriate<p>
+ */
 public class BinarySearchTree<T extends Comparable<? super T>> {
 
-    public static class Node<T> {
-        public T element;
-        public Node<T> left;
-        public  Node<T> right;
+    private static class Node<T> {
+        T element;
+        Node<T> left;
+        Node<T> right;
 
         public Node(T element) {
             this.element = element;
@@ -163,10 +168,10 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * 按树的形状打印树
      */
     public void printTree() {
-
+        //...
     }
 
     private void printTree(Node<T> root) {
-
+        //...
     }
 }

@@ -7,10 +7,10 @@ import java.util.Random;
 import static sort.QuickSort.swapReferences;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-01-02 9:32
- * Description: 选择问题的两种算法，即找第i个顺序统计量（该集合中第i小的元素）
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-01-02 9:32<p>
+ * 选择问题的两种算法，即找第i个顺序统计量（该集合中第i小的元素）<p>
  */
 public class OrderStatistic {
 

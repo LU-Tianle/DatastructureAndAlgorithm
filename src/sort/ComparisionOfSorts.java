@@ -3,10 +3,10 @@ package sort;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-12-25 16:55
- * Description: 几种排序的比较
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-12-25 16:55<p>
+ * 几种排序的比较<p>
  */
 public class ComparisionOfSorts {
     public static void main(String[] args) {

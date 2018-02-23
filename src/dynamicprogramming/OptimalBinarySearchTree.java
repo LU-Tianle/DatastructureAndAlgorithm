@@ -3,10 +3,10 @@ package dynamicprogramming;
 import datastructures.BinarySearchTree;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-02-06 22:48
- * Description: 最优二叉搜索树（Optimal-BST）（算法导论15.5）
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-02-06 22:48<p>
+ * 最优二叉搜索树（Optimal-BST）（算法导论15.5）<p>
  */
 public class OptimalBinarySearchTree<T extends Comparable<? super T>> {
     private T[] keyWords;
@@ -24,6 +24,8 @@ public class OptimalBinarySearchTree<T extends Comparable<? super T>> {
     //root[i][j](1<=i<=n,i<=j<=n)：子问题i~j的根结点
 
     public OptimalBinarySearchTree(T[] keyWords, Double[] p, Double[] q) {
+        if (p.length != q.length - 1 || keyWords.length != p.length)
+            throw new IllegalArgumentException("输入参数错误");
         this.keyWords = keyWords;
         this.p = p;
         this.q = q;
@@ -83,7 +85,7 @@ public class OptimalBinarySearchTree<T extends Comparable<? super T>> {
     private void ConstructOptimalBST(int i, int j) {
         if (i >= j) {
             optimalBST.insert(keyWords[root[j][j] - 1]);
-        }else{
+        } else {
             optimalBST.insert(keyWords[root[i][j] - 1]);
             ConstructOptimalBST(i, root[i][j] - 1);
             ConstructOptimalBST(root[i][j] + 1, j);

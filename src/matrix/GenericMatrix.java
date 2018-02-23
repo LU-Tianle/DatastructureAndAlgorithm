@@ -3,11 +3,11 @@ package matrix;
 import java.lang.reflect.Array;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-02-03 9:34
- * Description: 泛型矩阵类，是一个抽象类，实现矩阵的基本运算，矩阵是一个泛型的二维数组
- * 子类只需指定具体的类型，重写矩阵元素之间的加法乘法和定义0元素三个方法，即可实现矩阵的基本运算
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-02-03 9:34<p>
+ * 泛型矩阵类，是一个抽象类，实现矩阵的基本运算，矩阵是一个泛型的二维数组<p>
+ * 子类只需指定具体的类型，重写矩阵元素之间的加法乘法和定义0元素三个方法，即可实现矩阵的基本运算<p>
  */
 public abstract class GenericMatrix<T extends Number> {
     protected T[][] a;

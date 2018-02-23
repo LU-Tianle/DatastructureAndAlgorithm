@@ -5,18 +5,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Lu Tainle
- * Date: 2017-09-09
- * Description: 分离链接Hash表
+ * Created with IntelliJ IDEA.<p>
+ * User: Lu Tainle<p>
+ * Date: 2017-09-09<p>
+ * 分离链接Hash表<p>
+ * // ******************PUBLIC OPERATIONS*********************<p>
+ * // void insert( x )       --> Insert x<p>
+ * // void remove( x )       --> Remove x<p>
+ * // boolean contains( x )  --> Return true if x is present<p>
+ * // void makeEmpty( )      --> Remove all items<p>
  */
-
-// ******************PUBLIC OPERATIONS*********************
-// void insert( x )       --> Insert x
-// void remove( x )       --> Remove x
-// boolean contains( x )  --> Return true if x is present
-// void makeEmpty( )      --> Remove all items
-
 public class SeparateChainingHashTable<T> {
     private static final int DEFAULT_TABLE_SIZE = 101;
     private int currentSize;

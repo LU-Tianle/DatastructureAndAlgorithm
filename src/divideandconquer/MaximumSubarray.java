@@ -3,13 +3,13 @@ package divideandconquer;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-12-26 10:57
- * Description: 求解一个最大子数组的算法，给出暴力算法和分治算法，然后比较
- * 比较结果：
- * 实验表面采用递归实现的分治算法并不比暴力算法快多少，无论输入规模是多大
- * 可能是由于递归实现开销大
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-12-26 10:57<p>
+ * 求解一个最大子数组的算法，给出暴力算法和分治算法，然后比较<p>
+ * 比较结果：<p>
+ * 实验表面采用递归实现的分治算法并不比暴力算法快多少，无论输入规模是多大<p>
+ * 可能是由于递归实现开销大<p>
  */
 
 public class MaximumSubarray {
@@ -37,19 +37,19 @@ public class MaximumSubarray {
      */
     public static Output bruteForce(int[] array) {
         int leftPosition = 0;
-            int rightPosition = 0;
-            long sum = array[0];
+        int rightPosition = 0;
+        long sum = array[0];
 
-            for (int i = 0; i < array.length; i++) {
-                long sumI = 0;
-                for (int j = i; j < array.length; j++) {
-                    sumI += array[j];
-                    if (sum < sumI) {
-                        sum = sumI;
-                        leftPosition = i;
-                        rightPosition = j;
-                    }
+        for (int i = 0; i < array.length; i++) {
+            long sumI = 0;
+            for (int j = i; j < array.length; j++) {
+                sumI += array[j];
+                if (sum < sumI) {
+                    sum = sumI;
+                    leftPosition = i;
+                    rightPosition = j;
                 }
+            }
         }
 
         return new Output(leftPosition, rightPosition, sum);

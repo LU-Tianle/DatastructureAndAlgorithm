@@ -3,13 +3,13 @@ package dynamicprogramming;
 import java.util.Arrays;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-02-02 9:30
- * Description:钢条切割问题（算法导论15.1），给出三种算法并比较：
- * 1.自顶向下（不使用动态规划，递归）
- * 2.带备忘的自顶向下（动态规划，递归）
- * 3.自底向上（动态规划，不递归），并且给出最优切割方案
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-02-02 9:30<p>
+ * 钢条切割问题（算法导论15.1），给出三种算法并比较：<p>
+ * 1.自顶向下（不使用动态规划，递归）<p>
+ * 2.带备忘的自顶向下（动态规划，递归）<p>
+ * 3.自底向上（动态规划，不递归），并且给出最优切割方案<p>
  */
 public class RodCutting {
     Integer[] PRICE;

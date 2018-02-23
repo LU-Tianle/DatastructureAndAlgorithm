@@ -8,10 +8,10 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-9-13
- * Description: 表的链表实现，即：实现Collection中的LinkedList
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-9-13<p>
+ * 表的链表实现，即：实现Collection中的LinkedList<p>
  */
 
 public class MyLinkedList<T> implements Iterable<T> {

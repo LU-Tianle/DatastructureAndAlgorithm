@@ -3,10 +3,10 @@ package sort;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2017-12-28 15:00
- * Description: 插入排序
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2017-12-28 15:00<p>
+ * 插入排序<p>
  */
 public class InsertionSort {
     /**

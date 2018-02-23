@@ -1,10 +1,10 @@
 package matrix;
 
 /**
- * Created with IntelliJ IDEA.
- * Author: Lu Tianle
- * Date: 2018-02-04 14:10
- * Description: 继承GenericMatrix类，指定具体的泛型类型，实现一个元素为Integer的矩阵类与基本元素
+ * Created with IntelliJ IDEA.<p>
+ * Author: Lu Tianle<p>
+ * Date: 2018-02-04 14:10<p>
+ * 继承GenericMatrix类，指定具体的泛型类型，实现一个元素为Integer的矩阵类与基本元素<p>
  */
 public class IntegerMatrix extends GenericMatrix<Integer> {
     public IntegerMatrix(Integer[][] a) {
@@ -41,10 +41,4 @@ public class IntegerMatrix extends GenericMatrix<Integer> {
         return new IntegerMatrix(multiply2dArray(matrix2.a));
     }
 
-    public static void main(String[] args) {
-        IntegerMatrix integerMatrix1 = new IntegerMatrix(new Integer[][]{{1, 2, 3}, {4, 5, 6}});
-        IntegerMatrix integerMatrix2 = new IntegerMatrix(new Integer[][]{{100, 10}, {10, 100}, {1, 1000}});
-
-        integerMatrix1.multiplyMatrix(integerMatrix2).printMatrix();
-    }
 }
