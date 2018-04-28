@@ -276,16 +276,23 @@ public class AdjacentList<T extends Number> {
         return transposeDigraph;
     }
 
-//    /**
-//     * 比较两个图（的邻接链表）是否相同
-//     *
-//     * @param adjacentList2 另一个邻接链表
-//     * @return 相同：true，不同：false
-//     */
-//    public boolean equals(AdjacentList<T> adjacentList2) {
-//
-
-//    }
+    /**
+     * 比较两个图（的邻接链表）是否相同
+     *
+     * @param adjacentList2 另一个邻接链表
+     * @return 相同：true，不同：false
+     */
+    @Override
+    public boolean equals(Object adjacentList2) {
+        if (this == adjacentList2) {
+            return true;
+        }
+        if (adjacentList2 instanceof AdjacentList) {
+            AdjacentList anotherAdjacentList = (AdjacentList) adjacentList2;
+//                TODO
+        }
+        return false;
+    }
 
     /**
      * 测试图是有向图还是无向图

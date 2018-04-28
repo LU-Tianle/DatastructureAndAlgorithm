@@ -111,7 +111,7 @@ public class MatrixChainMultiplication {
      */
     public static void main(String[] args) {
         //矩阵链的尺寸表，长度是矩阵个数+1
-        Integer[] matrixChainSize = new Integer[]{30, 35, 15, 5, 10, 20, 25};
+        Integer[] matrixChainSize = new Integer[]{5,3,4,2,7};
         MatrixChainMultiplication.matrixChainOrder(matrixChainSize);
         MatrixChainMultiplication.memoizedMatrixChain(matrixChainSize);
     }

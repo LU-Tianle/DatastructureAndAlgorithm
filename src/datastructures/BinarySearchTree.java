@@ -1,5 +1,7 @@
 package datastructures;
 
+import java.util.LinkedList;
+
 /**
  * Created with IntelliJ IDEA.<p>
  * User: Lu Tainle<p>
@@ -123,7 +125,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
     private Node<T> remove(T x, Node<T> root) {
         if (root == null) {
-            return root;
+            return null;
         }
 
         int compareResult = x.compareTo(root.element);
@@ -162,16 +164,5 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
             System.out.print(root.element + " ");
             printKeywords(root.right);
         }
-    }
-
-    /**
-     * 按树的形状打印树
-     */
-    public void printTree() {
-        //...
-    }
-
-    private void printTree(Node<T> root) {
-        //...
     }
 }

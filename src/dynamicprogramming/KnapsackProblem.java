@@ -1,6 +1,6 @@
 package dynamicprogramming;
 
-import java.util.PriorityQueue;
+import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,8 +37,11 @@ public class KnapsackProblem {
         for (int j = 0; j < bagCapacity + 1; j++) {
             maxValues[0][j] = 0;
         }
-        Boolean[][] bag = new Boolean[n + 1][bagCapacity + 1];
         //bag[i][j]：当背包容量是j时，物品i是否装入
+        Boolean[][] bag = new Boolean[n + 1][bagCapacity + 1];
+        for (int i = 0; i < bag.length; i++) {
+            Arrays.fill(bag[i], false);
+        }
         for (int i = 1; i < n + 1; i++) {
             for (int j = 1; j < bagCapacity + 1; j++) {
                 if (j < weights[i - 1]) {
@@ -48,7 +51,6 @@ public class KnapsackProblem {
                     Integer tmp = maxValues[i - 1][j - weights[i - 1]] + values[i - 1];
                     if (maxValues[i - 1][j] > tmp) {
                         maxValues[i][j] = maxValues[i - 1][j];
-                        bag[i][j] = false;
                     } else {
                         maxValues[i][j] = tmp;
                         bag[i][j] = true;
@@ -56,14 +58,15 @@ public class KnapsackProblem {
                 }
             }
         }
+        System.out.println("最大价值：" + maxValues[n][bagCapacity]);
+        System.out.print("装入的物品：");
+        System.out.println();
         for (int i = 0; i < bag.length; i++) {
-            for (int j = 0; j < bag[0].length; j++) {
+            for (int j = 0; j < bag[1].length; j++) {
                 System.out.print(bag[i][j] + " ");
             }
             System.out.println();
         }
-        System.out.println("最大价值：" + maxValues[n][bagCapacity]);
-        System.out.print("装入的物品：");
         printBag(bag, weights, n, bagCapacity);
     }
 
@@ -71,16 +74,16 @@ public class KnapsackProblem {
         if (i == 0 || j == 0) {
             return;
         }
-        while (!bag[i--][j]) {
+        while (i > 0 && !bag[i--][j]) {
         }
         printBag(bag, weights, i, j - weights[i]);
         System.out.print(i + 1 + " ");
     }
 
     public static void main(String[] args) {
-        Integer[] values = new Integer[]{6, 3, 5, 4, 6};//物品价值
-        Integer[] weights = new Integer[]{2, 2, 6, 5, 4};//物品重量
-        Integer bagCapacity = 10;//背包容量
+        Integer[] values = new Integer[]{11, 11, 20, 30};//物品价值
+        Integer[] weights = new Integer[]{12, 13, 23, 36};//物品重量
+        Integer bagCapacity = 40;//背包容量
         knapsack(values, weights, bagCapacity);
     }
 }

@@ -119,13 +119,15 @@ public class MaximumSubarray {
      */
     public static void main(String[] args) {
 
-        int[] a = new int[1000];
-        Random random = new Random();
-        int max = 20;
-        int min = -20;
-        for (int i = 0; i < a.length; i++) {
-            a[i] = random.nextInt(max - min) + min;
-        }
+//        int[] a = new int[1000];
+//        Random random = new Random();
+//        int max = 20;
+//        int min = -20;
+//        for (int i = 0; i < a.length; i++) {
+//            a[i] = random.nextInt(max - min) + min;
+//        }
+
+        int[] a = new int[]{1, 1, -1, -10, 11, 4, -6, 9, 20, -10, -2};
 
         long beginTimeBruteForce = System.nanoTime();
         Output output1 = bruteForce(a);
